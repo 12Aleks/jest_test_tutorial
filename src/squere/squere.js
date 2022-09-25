@@ -5,4 +5,17 @@ const squere = (number) => {
     return Math.pow(number, 2)
 }
 
-module.exports = squere
+let users = [
+    {name: "Bob", age: 20},
+    {name: "Tom", age: 25}, 
+    {name: "Sem", age: 40}
+]
+
+const result = (data) => {
+  if(data[0].age >= 20) return true
+  return false
+}
+
+result(users)
+
+module.exports = {squere, result}
