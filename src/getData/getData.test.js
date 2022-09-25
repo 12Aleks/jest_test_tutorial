@@ -95,7 +95,12 @@ describe('axios', () => {
          //to czto ozydajem 
          //axios.get wyzowitsa chotiaby raz
          expect(axios.get).toBeCalledTimes(1)
+
          //rezultat wyzowa getData - masiw strok
          expect(data).toEqual(['1', '2', '3'])
+
+        //formirujet fajl .snap s pravilnymi rezultatami testow, 
+        //esli funkcija slomana, mozno po fajlu poniat kakoj rezultat my ozydajem
+        expect(data).toMatchSnapshot()
     })
 })
